@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <div class="main">
-      <div class="hero">
+    <div class="main ">
+      <div class="hero" >
         <img src="../assets/image/mozaic.jpg" alt="" />
 
         <div class="hero-inner">
@@ -107,8 +107,7 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-        background: rgba(0, 0, 0, 0.5);
-
+        
         .image {
           max-width: 20rem;
 

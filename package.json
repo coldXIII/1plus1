@@ -9,10 +9,12 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@types/vue": "^2.0.0",
     "core-js": "^3.8.3",
     "pinia": "^2.0.13",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
+    "vue-scroll-reveal": "^1.0.11",
     "vue3-carousel": "^0.1.38"
   },
   "devDependencies": {

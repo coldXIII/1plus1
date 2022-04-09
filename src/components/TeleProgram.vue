@@ -5,7 +5,7 @@
       <a href="" class="btn">Вся телепрограма</a>
     </div>
 
-    <div class="sliderbox">
+    <div class="sliderbox wow animate__animated animate__fadeInRight">
       <Carousel
         class="carousel"
         :wrap-around="true"

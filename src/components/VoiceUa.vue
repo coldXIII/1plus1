@@ -4,14 +4,14 @@
       <h2>Голос країни</h2>
       <a href="" class="btn-white">Всі відео</a>
     </div>
-    <div class="sliderbox">
+    <div class="sliderbox ">
       <Carousel
         class="carousel"
         :wrap-around="true"
         :settings="settings"
         :breakpoints="breakpoints"
       >
-        <Slide v-for="video in videos" :key="video">
+        <Slide v-for="video in videos" :key="video" class="wow animate__animated animate__zoomIn">
           <div class="carousel__item">
             <img :src="require(`../assets/image/${video}.jpg`)" />
           </div>

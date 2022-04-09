@@ -4,10 +4,10 @@
     <h1>Мандруй Україною з Дмитром Комаровим</h1>
     <div class="container-inner">
       <div class="video">
-        <Videoplayer class="videoplayer" />
+        <Videoplayer class="videoplayer wow animate__animated animate__slideInLeft" />
       </div>
       <div class="video-list">
-        <article class="articles">
+        <article class="articles wow animate__animated animate__slideInRight">
           <ul>
             <li v-for="(item, id) in travelUA" :key="id">
               <div class="image">

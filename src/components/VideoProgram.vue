@@ -4,7 +4,7 @@
       <h2>Більше програм</h2>
       <a href="" class="btn">Дивитись всі програми</a>
     </div>
-    <div class="gridbox">
+    <div class="gridbox wow animate__animated animate__zoomIn">
       <div class="grid-item" v-for="(video, id) in videoPrograms" :key="id">
         <div class="image">
           <img :src="require(`../assets/image/${video.image}.png`)" />

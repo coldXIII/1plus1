@@ -4,7 +4,7 @@
       <h2>Більше новин</h2>
       <a href="" class="btn">Читати всі новини</a>
     </div>
-    <div class="gridbox">
+    <div class="gridbox wow animate__animated animate__zoomIn">
       <div class="gridbox-item" v-for="(item, id) in moreNews" :key="id">
         <div class="image">
           <img :src="require(`../assets/image/${item.image}.jpg`)" />

@@ -32,7 +32,7 @@ import { useStore } from '../pinia/data.js';
 
 import MoreNews from '@/components/MoreNews.vue';
 export default {
-  name: 'AnouncementView',
+  name: 'ScheduleView',
   components: {
     Carousel,
     Slide,
@@ -94,7 +94,6 @@ export default {
       .carousel__item {
         padding: 2rem;
          color: var(--gray);
-          box-shadow: 1px 1px 5px rgba(150, 150, 150, 0.5);
         h3 {
           font-weight: 800;
         }

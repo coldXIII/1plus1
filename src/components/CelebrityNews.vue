@@ -4,7 +4,7 @@
       <h2>Зіркове життя</h2>
       <a href="" class="btn">Перейти на сторінку проекту</a>
     </div>
-    <div class="gridbox">
+    <div class="gridbox wow animate__animated animate__zoomIn">
       <div class="gridbox-item" v-for="(item, id) in celebrityNews" :key="id">
         <div class="image">
           <img :src="require(`../assets/image/${item.image}.jpg`)" />

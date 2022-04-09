@@ -1,7 +1,7 @@
 <template>
   <div class="nav">
-    <MobileMenu class="mobile-menu" :class="{ open: showMobileMenu }" />
-    <div class="nav-menu">
+      <MobileMenu class="mobile-menu" :class="{open: showMobileMenu }" />
+     <div class="nav-menu">
       <div class="nav-menu-logo">
         <a
           href=""
@@ -144,6 +144,7 @@ export default {
 };
 </script>
 <style scoped lang="scss">
+
 .mobile-menu {
   position: absolute;
   top: 4.3rem;
@@ -152,11 +153,11 @@ export default {
   min-width: 50%;
   z-index: 1000000;
   display: block;
-  transition: all 0.5s ease-in-out;
+  transition: all 1s ease-in-out;
   @media (min-width: 991px) {
     display: none;
   }
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 991px) {
     width: 100%;
   }
 

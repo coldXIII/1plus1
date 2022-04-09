@@ -7,9 +7,9 @@
       </h2>
       <a href class="btn">Перейти до рубріки</a>
     </div>
-    <div class="main">
+    <div class="main wow animate__animated animate__zoomIn">
       <div class="articles">
-        <ul>
+        <ul class="w">
           <li v-for="(item, id) in beautyNews" :key="id">
             <div class="image">
               <img :src="require(`../assets/image/${item.image}.jpg`)" />
@@ -27,7 +27,7 @@
           </li>
         </ul>
       </div>
-      <div class="sliderbox">
+      <div class="sliderbox ">
         <Slider class="slider" @next="next" @prev="prev">
           <Slide
             class="slide"
