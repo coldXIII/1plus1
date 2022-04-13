@@ -20,10 +20,6 @@ import {mapState} from "pinia"
 import { useStore } from '../../pinia/data.js';
 export default {
   name: 'TopNews',
-  data() {
-    return {
-          };
-  },
     computed:{
  ...mapState(useStore,['intNews'])
   }

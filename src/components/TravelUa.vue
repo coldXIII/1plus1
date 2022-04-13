@@ -33,11 +33,6 @@ export default {
   components: {
     Videoplayer,
   },
-  data() {
-    return {
-     
-    };
-  },
     computed: {
     ...mapState(useStore, ['travelUA']),
   },

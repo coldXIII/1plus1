@@ -24,11 +24,6 @@ import { mapState } from 'pinia';
 import { useStore } from '../pinia/data.js';
 export default {
   name: 'VideoProgram',
-  data() {
-    return {
-      
-    };
-  },
     computed: {
     ...mapState(useStore, ['videoPrograms']),
   },

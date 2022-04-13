@@ -21,11 +21,6 @@ import { mapState } from 'pinia';
 import { useStore } from '../pinia/data.js';
 export default {
   name: 'AppFooter',
-  data() {
-    return {
-    
-    };
-  },
     computed: {
     ...mapState(useStore, ['partnersLogo']),
   },

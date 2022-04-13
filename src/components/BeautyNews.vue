@@ -27,7 +27,7 @@
           </li>
         </ul>
       </div>
-      <div class="sliderbox ">
+      <div class="sliderbox">
         <Slider class="slider" @next="next" @prev="prev">
           <Slide
             class="slide"
@@ -42,7 +42,10 @@
         </Slider>
         <div class="images">
           <div class="image-item" v-for="(slide, index) in slides" :key="index">
-            <img :src="require(`../assets/image/${slide}.jpg`)" @click="changeActiveSlide(index)" />
+            <img
+              :src="require(`../assets/image/${slide}.jpg`)"
+              @click="changeActiveSlide(index)"
+            />
           </div>
         </div>
       </div>
@@ -55,30 +58,35 @@ import { mapState } from 'pinia';
 import { useStore } from '../pinia/data.js';
 import Slider from './slider/Slider.vue';
 import Slide from './slider/Slide.vue';
+import { ref } from 'vue';
 export default {
   name: 'BeautyNews',
   components: {
     Slider,
     Slide,
   },
-  data() {
-    return {
-     activeSlide: 'model1',
-      slides: ['model1', 'model2', 'model3', 'model4', 'model5', 'model6'],
-      visibleSlide: 0,
-      direction: 'left',
-    };
-  },
+  setup() {
+    const activeSlide = ref('model1');
+    const slides = ref([
+      'model1',
+      'model2',
+      'model3',
+      'model4',
+      'model5',
+      'model6',
+    ]);
+    const visibleSlide = ref(0);
+    const direction = ref('left');
 
+    return { activeSlide, slides, visibleSlide, direction };
+  },
   computed: {
     ...mapState(useStore, ['beautyNews']),
     slidesLength() {
       return this.slides.length;
     },
   },
-
   methods: {
-
     changeActiveSlide(index) {
       this.activeSlide = this.slides[index];
     },

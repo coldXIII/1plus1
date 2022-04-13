@@ -15,6 +15,7 @@
 <script>
 export default {
   name: 'AppSlider',
+
   methods: {
     next() {
       this.$emit('next');

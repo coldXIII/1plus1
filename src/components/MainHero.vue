@@ -1,12 +1,12 @@
 <template>
   <div class="container">
-    <div class="main ">
-      <div class="hero" >
-        <img src="../assets/image/mozaic.jpg" alt="" />
+    <div class="main">
+      <div class="hero">
+        <img src="../assets/logo/mozaic.webp" alt="" />
 
         <div class="hero-inner">
           <div class="image">
-            <img src="../assets/logo/logo1.jpg" alt="" />
+            <img src="../assets/logo/logo1.webp" alt="" />
           </div>
           <span class="tag">#соціум</span>
           <p>
@@ -24,21 +24,23 @@
               @click.prevent="activeTab(tab.name)"
               :class="{ active: currentTab == tab.name }"
             >
-              <a href="">{{ tab.name }}</a>
+              <a href="">{{ tab.title }}</a>
             </li>
           </ul>
         </div>
         <div class="news-list">
-          <TopNewsTab v-show="isActive('Топ')" />
-          <IntNewsTab v-show="isActive('Цікаві')" />
-          <LastNewsTab v-show="isActive('Останні')" />
-        </div>
+          <transition name="fade" mode="out-in">
+             <component :is="currentTab" />
+          </transition>
+         
+            </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { ref } from 'vue';
 import TopNewsTab from './tabs/TopNewsTab.vue';
 import IntNewsTab from './tabs/IntNewsTab.vue';
 import LastNewsTab from './tabs/LastNewsTab.vue';
@@ -50,35 +52,43 @@ export default {
     IntNewsTab,
     LastNewsTab,
   },
-  data() {
-    return {
-      tabs: [
-        {
-          name: 'Топ',
-        },
-        {
-          name: 'Цікаві',
-        },
-        {
-          name: 'Останні',
-        },
-      ],
-      currentTab: 'Топ',
-         };
+  setup() {
+    const tabs = ref([
+      {
+        title: 'Топ',
+        name: 'TopNewsTab',
+      },
+      {
+        title: 'Цікаві',
+        name: 'IntNewsTab',
+      },
+      {
+        title: 'Останні',
+        name: 'LastNewsTab',
+      },
+    ]);
+    const currentTab = ref('TopNewsTab');
+    return { currentTab, tabs };
   },
   methods: {
     activeTab(selectedTab) {
       this.currentTab = selectedTab;
-      console.log(this.currentTab);
-    },
-    isActive(selectedTab) {
-      return this.currentTab === selectedTab;
-    },
+    }
+
   },
 };
 </script>
 
 <style lang="scss" scoped>
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease-out;
+}
 .container {
   .main {
     display: flex;
@@ -107,7 +117,7 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-        
+
         .image {
           max-width: 20rem;
 
@@ -157,7 +167,7 @@ export default {
       }
 
       ul {
-        width: 100%;
+        // width: 100%;
         display: flex;
         justify-content: space-around;
         align-items: center;

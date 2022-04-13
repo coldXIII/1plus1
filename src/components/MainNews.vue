@@ -21,10 +21,7 @@ import { useStore } from '../pinia/data.js';
 
 export default {
   name: 'MainNews',
-  data() {
-    return {};
-  },
-  computed: {
+    computed: {
     ...mapState(useStore, ['mainNews']),
   },
 };

@@ -24,11 +24,6 @@ import { mapState } from 'pinia';
 import { useStore } from '../pinia/data.js';
 export default {
   name: 'CelebrityLife',
-  data() {
-    return {
-      
-    };
-  },
     computed: {
     ...mapState(useStore, ['celebrityNews']),
   },

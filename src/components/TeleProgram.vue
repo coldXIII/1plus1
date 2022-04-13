@@ -26,7 +26,6 @@
 <script>
 import 'vue3-carousel/dist/carousel.css';
 import { Carousel, Slide } from 'vue3-carousel';
-
 import { mapState } from 'pinia';
 import { useStore } from '../pinia/data.js';
 export default {
