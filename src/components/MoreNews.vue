@@ -1,18 +1,18 @@
 <template>
   <div class="container">
     <div class="header">
-      <h2>Більше новин</h2>
-      <a href="" class="btn">Читати всі новини</a>
+      <h2>{{ $t('more_news.title') }}</h2>
+      <a href="" class="btn">{{ $t('more_news.button') }}</a>
     </div>
     <div class="gridbox wow animate__animated animate__zoomIn">
       <div class="gridbox-item" v-for="(item, id) in moreNews" :key="id">
         <div class="image">
-          <img :src="require(`../assets/image/${item.image}.jpg`)" />
+          <img :src="require(`@/assets/image/${item.image}.jpg`)" />
         </div>
-        <a href="">{{ item.title }} </a>
+        <a href="">{{ $t(`more_news.${item.title}`) }} </a>
         <div class="tags">
-          <span class="date">{{ item.date }}</span> &nbsp;
-          <span class="tag">{{ item.tag }}</span>
+          <span class="date">{{ $d(new Date()) }}</span> &nbsp;
+          <span class="tag">{{ $t(`common.${item.tag}`) }}</span>
         </div>
       </div>
     </div>
@@ -21,11 +21,11 @@
 
 <script>
 import { mapState } from 'pinia';
-import { useStore } from '../pinia/data.js';
+import { useMoreNewsStore } from '@/pinia/morenews.store';
 export default {
-  name: 'CelebrityLife',
-    computed: {
-    ...mapState(useStore, ['moreNews']),
+  name: 'MoreNews',
+  computed: {
+    ...mapState(useMoreNewsStore, ['moreNews']),
   },
 };
 </script>

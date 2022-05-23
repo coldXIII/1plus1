@@ -4,27 +4,33 @@
       <ul>
         <li>
           <a href=""
-            ><ion-icon name="list-circle-outline"></ion-icon>&nbsp;Програми</a
-          >
-        </li>
-        <li>
-          <a href=""><ion-icon name="eye-outline"></ion-icon> &nbsp; Шоу</a>
-        </li>
-        <li>
-          <a href=""
-            ><ion-icon name="videocam-outline"></ion-icon> &nbsp; Серіали</a
+            ><i class="fa-solid fa-list"></i>&nbsp; {{ $t('nav.programs') }}</a
           >
         </li>
         <li>
           <a href=""
-            ><ion-icon name="videocam-outline"></ion-icon> &nbsp; Фільми</a
+            ><i class="fa-solid fa-tv"></i> &nbsp; {{ $t('nav.news') }}</a
           >
         </li>
         <li>
           <a href=""
-            ><ion-icon name="people-outline"></ion-icon> &nbsp; Ведучі</a
+            ><i class="fa-solid fa-tv"></i> &nbsp; {{ $t('nav.video') }}</a
           >
         </li>
+        <li>
+          <a href=""
+            ><i class="fa-solid fa-tv"></i> &nbsp;{{ $t('nav.movies') }}</a
+          >
+        </li>
+        <li>
+          <a href=""
+            ><i class="fa-solid fa-users"></i> &nbsp;
+            {{ $t('nav.anouncement') }}</a
+          >
+        </li>
+        <div class="langs">
+          <SwitchLocales />
+        </div>
         <li>
           <input type="text" placeholder=" Новини" />
           <button type="submit">Пошук</button>
@@ -34,7 +40,12 @@
   </div>
 </template>
 <script>
-export default {};
+import SwitchLocales from '../SwitchLocales.vue';
+export default {
+  components: {
+    SwitchLocales,
+  },
+};
 </script>
 
 <style scoped lang="scss">
@@ -52,6 +63,12 @@ export default {};
     ul {
       display: flex;
       flex-direction: column;
+      .langs {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
       li {
         display: flex;
@@ -62,7 +79,7 @@ export default {};
         margin: 0.5rem auto;
         transition: all 0.5s ease;
 
-           &:hover a {
+        &:hover a {
           color: var(--red);
         }
 
@@ -70,8 +87,6 @@ export default {};
           color: var(--white);
           font-weight: 700;
           font-size: 1.2rem;
-
-       
         }
 
         input {

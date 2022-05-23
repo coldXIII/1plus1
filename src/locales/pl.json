@@ -1,0 +1,133 @@
+{
+  "common": {
+    "tag1": "#wojna",
+    "tag2": "#prowadzący 1+1",
+    "tag3": "#gwiazdy",
+    "tag4": "#uroda"
+  },
+  "nav": {
+    "programs": "Programy",
+    "news": "Nowosci",
+    "video": "Video",
+    "movies": "Filmy i Serii",
+    "anouncement": "Zapowiedz",
+    "online": "Online",
+    "war_diaries": "Dzienniki Wojny",
+    "news_array": {
+      "recipes": "#przepisy",
+      "horoscope": "#horoscopy",
+      "health": "#zdrowie",
+      "beauty": "#uroda",
+      "holiday": "#święto",
+      "stars": "#gwiazdy",
+      "socium": "#socium"
+    }
+  },
+  "hero": {
+    "top": "Top",
+    "interesting": "Ciekawe",
+    "last": "Ostatnie",
+    "hero_title": "Media grupy 1+1 dołączyły do ​​wspólnej audycji informacyjnej kraju „United News”",
+
+    "top_news": {
+      "article_first": "Które ukraińskie kanały telewizyjne stały się dostępne na otwartym satelicie 12,5 tony pomocy humanitarnej?",
+      "article_second": "Fundacja Charytatywna „Nie jesteś sam 1+1 media” otrzymała i przekazuje 12,5 tony pomocy humanitarnej",
+      "article_third": "Ukraińska telewizja za granicą: przydatne wskazówki, jak podłączyć się przez satelitę",
+      "article_fourth": "Materiały dla Hagi: 1+1 media zbierają wszelkie informacje o zbrodniach Federacji Rosyjskiej i wojnie w miastach Ukrainy",
+      "article_fifth": "Materiały dla Hagi: 1+1 media zbierają wszelkie informacje o zbrodniach Federacji Rosyjskiej i wojnie w miastach Ukrainy"
+    },
+    "interesting_news": {
+      "article_first": "Co dzieje się z psychiką po obejrzeniu okropnych ujęć wyzwolonego Kijowa i jak przezwyciężyć zniszczenia: porady psychologa Svetlany Roiz ",
+      "article_second": "Dzienniki wojenne: korespondentka TSN Iryna Markevich opowiedziała o swoim domu, który został splądrowany i spalony przez okupantów",
+      "article_third": "'Chciałbym kontynuować moją rodzinę' - piosenkarka i prezenterka Kola Serha opowiedziała w 'Śniadaniu 1+1' jak broni Ukrainy i marzenia po wojnie",
+      "article_fourth": "Wojna planetarna 5-6 kwietnia: dlaczego astrologowie nazywają te dni niebezpiecznymi",
+      "article_fifth": "Horoskop na 5 kwietnia dla wszystkich znaków zodiaku: cena najdroższego jest zawsze wysoka"
+    },
+    "latest_news": {
+      "article_first": "„Długo mieliśmy pecha z sąsiadem, ale Rosjanom nigdy nie udało się nas zniszczyć” – dziennikarka TSN Julia Kirienko",
+      "article_second": "Fundacja Charytatywna „Nie jesteś sam 1+1 media” otrzymała i przekazuje 12,5 tony pomocy humanitarnej",
+      "article_third": "Lydia Taran opowiedziała o spotkaniu w Luksemburgu z Aloną Zagrzeb: dziewczyną, która nakręciła wideodziennik blokady Mariupola",
+      "article_fourth": "Trzymam cios razem z moim ludem ”- aktorka Irma Vitovska powiedziała„ ZVL ”wyłącznie o swojej działalności wolontariackiej podczas wojny i jej prawdziwych wartościach",
+      "article_fifth": "Trenerka Voice of the Country-12 Oleksandra Zaritska pokazała zdjęcia swoich dzieci z Charkowa: „Miasto wolnych, utalentowanych ludzi” "
+    }
+  },
+  "main_news": {
+    "article_first": "Jak przejść z trybu przetrwania do trybu życia: wskazówki od psycholog Anny Kushneruk",
+    "article_second": "Dlaczego Rosja od wieków cynicznie wkracza w naszą historię i dziedzictwo kulturowe: zbrodnie i mity Moskwy (filmy historyczne „Ukraina. Powrót do swojej historii”)",
+    "article_third": "Zaćmienie Słońca na Ukrainie w 2022 roku: kiedy i na co się przygotować",
+    "article_fourth": "Wojna nie jest przeszkodą: rozpoczęto zasiewy w 20 regionach Ukrainy"
+  },
+  "more_news": {
+    "title": "Więcej wiadomości",
+    "button": "Przeczytaj wszystkie wiadomości",
+    "article_first": "Rzadki strzał: Światosław Wakarczuk z córką-ochotniczką we Lwowie",
+    "article_second": "W Ochmatdycie odbył się tradycyjny piątkowy koncert charytatywny: pacjentów i lekarzy wspierała prezenterka 1+1 Solomiya Vitvitska, piosenkarz Vitaliy Kozlovsky i wielu młodych artystów",
+    "article_third": "Ukraiński chłopiec, którego Angelina Jolie poznała we włoskim szpitalu, został podopiecznym projektu charytatywnego Make a Dream Come True",
+    "article_fourth": "Oficjalna: Orkiestra Kałusza wystąpi na żywo na Eurowizji-2022 i weźmie udział w koncertach promocyjnych w przeddzień konkursu piosenki",
+    "article_fifth": "Wzorcowy na światowym poziomie Ukrainiec Lew Ulesow został lekarzem wojskowym obrony terytorialnej: szczegóły w 'Śniadaniu. Online'"
+  },
+  "celebrity_news": {
+    "title": "Życie gwiazd",
+    "button": "Przejdź do strony projektu",
+    "article_first": "Olya Polyakova w „Secular Life” komentowała konkurs z innymi trenerami Voice of the Country i opowiedziała o reakcji publiczności na jej udział w programie",
+    "article_second": "'Może wyrażę zgodę na trzecie dziecko mojego męża' - Kateryna Kuhar podzieliła się swoim życiem osobistym z 'Secular Life'",
+    "article_third": "Artur Logai opowiedział o strasznych momentach podczas jazdy konnej podczas kręcenia serialu „Dom Bobrinskiego”",
+    "article_fourth": "Co zaskoczyło gospodarza programu „Twój dzień” Konstantyna Hrubycha w wywiadzie dla „Secular Life z Kateryna Osadcha”",
+    "article_fifth": "DOROFEEVA przyznała w 'Secular Life': 'Wreszcie zaczęłam lubić siebie'"
+  },
+  "beauty_news": {
+    "title": "Wiadomości z sekcji",
+    "button": "Przejdź do sekcji",
+    "article_first": "Miesięczny kalendarz fryzur na kwiecień 2022: dni sprzyjające i niesprzyjające urodzie",
+    "article_second": "Ogromna flaga Ukrainy na Mercedes Benz Fashion Week w Berlinie: ukraiński projektant Jean Gritzfeldt zaprezentował kolekcję stworzoną podczas wojny",
+    "article_third": "Jakie jeansy wyszły z mody i co łączyć z modnymi szerokimi jeansami (porada stylistki)",
+    "article_fourth": "Jak czyścić buty z soli: skóra, zamsz, nubuk (wyjaśnił mistrz renowacji skóry)",
+    "article_fifth": "Zamiast czapki: stylowe i ciepłe wersje czapek na zimę (porady projektanta Andre Tan)",
+    "article_sixth": "Pomysły na manicure: zwięzłe i delikatne wzory"
+  },
+  "travel_ua": {
+    "title":"Podróżuj na Ukrainę z Dmitrijem Komarowem",
+    "article_first": "Starożytne tradycje huculskich serowarów i tajemnice karpackiej produkcji",
+    "article_second": "Geograficzne centrum Europy i droga do miejsca narodzin sera huculskiego",
+    "article_third": "Ukraiński Robinson Crusoe: jako mnich-pustelnik przystosowany do życia",
+    "article_fourth": "Co łączy latarnię morską na wyspie Jarilgach z Wieżą Eiffla i Paryżem?",
+    "article_fifth": "Jak Dmitrij Komarow i Aleksander Dmitriew odpoczywali ze swoimi rodzinami",
+    "article_sixth": "Jak Dmitrij Komarow i Aleksander Dmitriew odpoczywali ze swoimi rodzinami"
+  },
+  "video": {
+    "title": "Więcej programów",
+    "button": "Oglądaj wszystkie programy",
+    "article_first": "śniadanie z 1 + 1",
+    "article_second": "liga śmiechu",
+    "article_third": "lepsink bitwa",
+    "article_fourth": "śniadanie. weekend",
+    "article_fifth": "twój wieczór",
+    "article_sixth": "skrzydła miłości",
+    "time_first":"Pn-Pt",
+    "time_second":"Pn-Pt",
+    "time_third":"nedlugo",
+    "time_fourth":"Sb-Nd",
+    "time_fifth":"з 7 lutego",
+    "time_sixth":"Pn-Pt"
+  },
+  "voice_ua": {
+    "title": "Głos kraju",
+    "button": "Wszystkie filmy"
+  },
+  "footer":{
+    "link1":"o kanale",
+    "link2":"kodowanie satelitarne",
+    "link3":"reklama",
+    "link4":"problemy z kanałem 1 + 1",
+    "link5":"odlewy",
+    "link6":"kariera",
+    "link7":"prowadzący",
+    "link8":"struktura własności",
+    "link9":"polityka prywatności"
+  },
+  "tv_program":{
+    "title":"Teraz na 1+1",
+    "button":"Cały program telewizyjny",
+    "news":"Nowosci"
+  }
+}

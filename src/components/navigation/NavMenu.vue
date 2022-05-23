@@ -1,14 +1,14 @@
 <template>
   <div class="nav">
-      <MobileMenu class="mobile-menu" :class="{open: showMobileMenu }" />
-     <div class="nav-menu">
+    <MobileMenu class="mobile-menu" :class="{ open: showMobileMenu }" />
+    <div class="nav-menu">
       <div class="nav-menu-logo">
         <a
           href=""
           @click="activeLink('/')"
           :class="{ active: currentLink == '/' }"
         >
-          <img src="../../assets/logo/logo.svg" alt
+          <img src="@/assets/logo/logo.svg" alt
         /></a>
       </div>
       <div id="bars">
@@ -23,13 +23,15 @@
           @click.prevent="activeLink('/program')"
           :class="{ active: currentLink == '/program' }"
         >
-          <a href @click.prevent="showTabOne = !showTabOne">
-            Програми
-            <ion-icon name="caret-down-outline"></ion-icon>
+          <a href @click.prevent="showTabOne = !showTabOne, showTabTwo = false">
+            {{ $t('nav.programs') }} &nbsp;
+            <i class="fa-solid fa-chevron-down"></i>
           </a>
           <div class="tab tabOne" v-if="showTabOne">
             <ul>
-              <li v-for="(link, idx) in links" :key="idx">{{ link.title }}</li>
+              <li v-for="item in links" :key="item.text_key">
+                {{ $t(`nav.${item.text_key}`) }}
+              </li>
             </ul>
           </div>
         </li>
@@ -37,13 +39,15 @@
           @click.prevent="activeLink('/news')"
           :class="{ active: currentLink == '/news' }"
         >
-          <a href @click.prevent="showTabTwo = !showTabTwo">
-            Новини
-            <ion-icon name="caret-down-outline"></ion-icon>
+          <a href @click.prevent="showTabTwo = !showTabTwo, showTabOne = false">
+            {{ $t('nav.news') }} &nbsp;
+             <i class="fa-solid fa-chevron-down"></i>
           </a>
           <div class="tab tabTwo" v-if="showTabTwo">
             <ul>
-              <li v-for="(link, idx) in news" :key="idx">{{ link.title }}</li>
+              <li v-for="item in news" :key="item.text_key">
+                {{ $t(`nav.news_array.${item.text_key}`) }}
+              </li>
             </ul>
           </div>
         </li>
@@ -51,19 +55,21 @@
           @click="activeLink('/video')"
           :class="{ active: currentLink == '/video' }"
         >
-          <router-link to="/video" href>Відео</router-link>
+          <router-link to="/video" href> {{ $t('nav.video') }}</router-link>
         </li>
         <li
           @click="activeLink('/movies')"
           :class="{ active: currentLink == '/movies' }"
         >
-          <router-link to="/movies" href>Кіно та Серіали</router-link>
+          <router-link to="/movies" href> {{ $t('nav.movies') }}</router-link>
         </li>
         <li
           @click="activeLink('/anouncement')"
           :class="{ active: currentLink == '/anouncement' }"
         >
-          <router-link to="/anouncement" href>Телепрограма</router-link>
+          <router-link to="/anouncement" href>
+            {{ $t('nav.anouncement') }}</router-link
+          >
         </li>
         <div class="social-icons">
           <li v-for="icon in socialIcons" :key="icon">
@@ -75,12 +81,7 @@
           </li>
         </div>
         <div class="langs">
-          <li>
-            <a href>UA &nbsp;</a>
-          </li>
-          <li>
-            <a href>RU</a>
-          </li>
+          <SwitchLocales />
         </div>
         <div class="search">
           <i class="fas fa-search" @click.prevent="showForm = !showForm"></i>
@@ -95,14 +96,15 @@
   </div>
   <div class="submenu">
     <ul>
-      <li>Телепрограма</li>
-      <li>Онлайн</li>
-      <li>Щоденники Війни</li>
+      <li>{{ $t('nav.anouncement') }}</li>
+      <li>{{ $t('nav.online') }}</li>
+      <li>{{ $t('nav.war_diaries') }}</li>
     </ul>
   </div>
 </template>
 <script>
 import MobileMenu from './MobileMenu.vue';
+import SwitchLocales from '../SwitchLocales.vue';
 
 export default {
   name: 'AppHeader',
@@ -115,20 +117,20 @@ export default {
       showForm: false,
 
       links: [
-        { title: 'Програми', url: '/' },
-        { title: 'Новини', url: '/news' },
-        { title: 'Відео', url: '/video' },
-        { title: 'Фільми', url: '/movies' },
-        { title: 'Телепрограма', url: '/anouncement' },
+        { text_key: 'programs' },
+        { text_key: 'news' },
+        { text_key: 'video' },
+        { text_key: 'movies' },
+        { text_key: 'anouncement' },
       ],
       news: [
-        { title: '#рецепти' },
-        { title: '#гороскопи' },
-        { title: '#здоров`я' },
-        { title: '#краса' },
-        { title: '#свято' },
-        { title: '#зірки' },
-        { title: '#соціум' },
+        { text_key: 'recipes' },
+        { text_key: 'horoscope' },
+        { text_key: 'health' },
+        { text_key: 'beauty' },
+        { text_key: 'holiday' },
+        { text_key: 'stars' },
+        { text_key: 'socium' },
       ],
       socialIcons: ['facebook', 'twitter', 'instagram'],
     };
@@ -140,11 +142,10 @@ export default {
     },
   },
 
-  components: { MobileMenu },
+  components: { MobileMenu, SwitchLocales },
 };
 </script>
 <style scoped lang="scss">
-
 .mobile-menu {
   position: absolute;
   top: 4.3rem;
@@ -154,10 +155,10 @@ export default {
   z-index: 1000000;
   display: block;
   transition: all 1s ease-in-out;
-  @media (min-width: 991px) {
+  @media (min-width: 992px) {
     display: none;
   }
-  @media screen and (max-width: 991px) {
+  @media screen and (max-width: 992px) {
     width: 100%;
   }
 
@@ -180,7 +181,7 @@ export default {
 
     &-logo {
       width: 5rem;
-      padding: 0.5rem;
+      min-width:4rem;
       img {
         width: 100%;
       }
@@ -189,12 +190,14 @@ export default {
       display: flex;
       justify-content: space-evenly;
       align-items: center;
-      @media (max-width: 990px) {
+      @media (max-width: 992px) {
         display: none;
       }
       li {
         list-style: none;
-        margin: 0 1rem;
+        margin: 0 0.5rem;
+        text-align: center;
+        white-space: nowrap;
         transition: transform 0.3s ease-in-out;
 
         a {
@@ -208,9 +211,10 @@ export default {
         &:hover a {
           color: var(--red);
         }
-        &:hover ion-icon {
+        &:hover i {
           transform: rotate(180deg);
           transition: 0.2s ease-in-out;
+        
         }
 
         &.active a {
@@ -219,7 +223,7 @@ export default {
 
         .tab {
           position: absolute;
-          bottom: -3rem;
+          bottom: -4rem;
           left: 0;
           width: 100%;
           height: 4rem;
@@ -303,7 +307,7 @@ export default {
         font-size: 2rem;
         color: var(--red);
         display: none;
-        @media (max-width: 990px) {
+        @media (max-width: 992px) {
           display: block;
         }
       }
@@ -344,13 +348,13 @@ export default {
 }
 .submenu {
   position: relative;
-  top: 10vh;
+  top: 3.2rem;
   width: 100%;
   padding: 0.8rem;
   background: var(--white);
   box-shadow: 0 0 0 rgba(0, 0, 0, 0.5), 0 5px 10px rgba(0, 0, 0, 0.5);
   z-index: 1;
-  @media (max-width: 1000px) {
+  @media (max-width: 992px) {
     top: 8vh;
     background: var(--light-gray);
   }

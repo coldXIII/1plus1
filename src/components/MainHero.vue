@@ -3,15 +3,13 @@
     <div class="main">
       <div class="hero">
         <img src="../assets/logo/mozaic.webp" alt="" />
-
         <div class="hero-inner">
           <div class="image">
-            <img src="../assets/logo/logo1.webp" alt="" />
+            <img src="@/assets/logo/logo1.webp" alt="" />
           </div>
-          <span class="tag">#соціум</span>
+          <span class="tag"> {{ $t('nav.news_array.socium') }}</span>
           <p>
-            Группа 1+1 медіа долучилася до спільного інформаційного єфіру країни
-            "Єдині новини"
+            {{ $t('hero.hero_title') }}
           </p>
         </div>
       </div>
@@ -24,16 +22,17 @@
               @click.prevent="activeTab(tab.name)"
               :class="{ active: currentTab == tab.name }"
             >
-              <a href="">{{ tab.title }}</a>
+              <a href="">
+                {{ $t(`hero.${tab.title}`) }}
+              </a>
             </li>
           </ul>
         </div>
         <div class="news-list">
           <transition name="fade" mode="out-in">
-             <component :is="currentTab" />
+            <component :is="currentTab" />
           </transition>
-         
-            </div>
+        </div>
       </div>
     </div>
   </div>
@@ -43,28 +42,28 @@
 import { ref } from 'vue';
 import TopNewsTab from './tabs/TopNewsTab.vue';
 import IntNewsTab from './tabs/IntNewsTab.vue';
-import LastNewsTab from './tabs/LastNewsTab.vue';
+import LatestNewsTab from './tabs/LatestNewsTab.vue';
 
 export default {
   name: 'MainHero',
   components: {
     TopNewsTab,
     IntNewsTab,
-    LastNewsTab,
+    LatestNewsTab,
   },
   setup() {
     const tabs = ref([
       {
-        title: 'Топ',
+        title: 'top',
         name: 'TopNewsTab',
       },
       {
-        title: 'Цікаві',
+        title: 'interesting',
         name: 'IntNewsTab',
       },
       {
-        title: 'Останні',
-        name: 'LastNewsTab',
+        title: 'last',
+        name: 'LatestNewsTab',
       },
     ]);
     const currentTab = ref('TopNewsTab');
@@ -73,14 +72,12 @@ export default {
   methods: {
     activeTab(selectedTab) {
       this.currentTab = selectedTab;
-    }
-
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;

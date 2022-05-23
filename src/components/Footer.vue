@@ -1,16 +1,16 @@
 <template>
   <div class="container">
     <ul class="partners">
-      <li v-for="(item, id) in partnersLogo" :key="id">
+      <li v-for="(item, id) in partners" :key="id">
         <a href=""
           ><div class="image">
-            <img :src="require(`../assets/image/${item.partner}.png`)" /></div
+            <img :src="require(`@/assets/image/${item.partner}.png`)" /></div
         ></a>
       </li>
     </ul>
     <ul class="links">
-      <li v-for="(item, id) in partnersLogo" :key="id">
-        <a href="">{{ item.link }}</a>
+      <li v-for="(item, id) in partners" :key="id">
+        <a href="">{{ $t(`footer.${item.link}`) }}</a>
       </li>
     </ul>
     </div>
@@ -18,11 +18,11 @@
 
 <script>
 import { mapState } from 'pinia';
-import { useStore } from '../pinia/data.js';
+import { useFooterStore } from '@/pinia/footer.store';
 export default {
   name: 'AppFooter',
     computed: {
-    ...mapState(useStore, ['partnersLogo']),
+    ...mapState(useFooterStore, ['partners']),
   },
 
 };

@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <div class="header">
-      <h2>Голос країни</h2>
-      <a href="" class="btn-white">Всі відео</a>
+      <h2>{{$t('voice_ua.title')}}</h2>
+      <a href="" class="btn-white">{{$t('voice_ua.button')}}</a>
     </div>
     <div class="sliderbox ">
       <Carousel
@@ -13,7 +13,7 @@
       >
         <Slide v-for="video in videos" :key="video" class="wow animate__animated animate__zoomIn">
           <div class="carousel__item">
-            <img :src="require(`../assets/image/${video}.jpg`)" />
+            <img :src="require(`@/assets/image/${video}.jpg`)" />
           </div>
         </Slide>
         <template #addons>

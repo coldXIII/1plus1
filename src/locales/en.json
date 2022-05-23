@@ -1,0 +1,133 @@
+{
+  "common": {
+    "tag1": "#war",
+    "tag2": "#presenters 1+1",
+    "tag3":"#stars",
+    "tag4":"#beauty"
+  },
+  "nav": {
+    "programs": "Programs",
+    "news": "News",
+    "video": "Video",
+    "movies": "Movies and Series",
+    "anouncement": "Anouncement",
+    "online": "Online",
+    "war_diaries": "Diaries of War",
+    "news_array": {
+      "recipes": "#recipes",
+      "horoscope": "#horoscope",
+      "health": "#health",
+      "beauty": "#beauty",
+      "holiday": "#holiday",
+      "stars": "#stars",
+      "socium": "#socium"
+    }
+  },
+  "hero": {
+    "top": "Top",
+    "interesting": "Interesting",
+    "last": "Last",
+    "hero_title": "Group 1 + 1 media joined the joint information broadcast of the country 'United News'",
+    "top_news": {
+      "article_first": "Which Ukrainian TV channels became available on the open satellite of 12.5 tons of humanitarian aid",
+      "article_second": "Charitable Foundation 'You are not alone 1 + 1 media' received and donates 12.5 tons of humanitarian aid",
+      "article_third": "Ukrainian television abroad: how to connect via satellite useful tips",
+      "article_fourth": "Materials for The Hague: 1 + 1 media collects all information about the crimes of the Russian Federation and the war in the cities of Ukraine",
+      "article_fifth": "Materials for The Hague: 1 + 1 media collects all information about the crimes of the Russian Federation and the war in the cities of Ukraine"
+    },
+    "interesting_news": {
+      "article_first": "Qué le sucede a la psique después de ver las horribles tomas de la región liberada de Kiev y cómo superar la devastación: consejos de la psicóloga Svetlana Roiz",
+      "article_second": "Diarios de guerra: la corresponsal de TSN, Iryna Markevich, contó sobre su casa, que fue saqueada e incendiada por los ocupantes",
+      "article_third": "'Me gustaría continuar con mi familia', - el cantante y presentador Kolya Serha contó en 'Desayuno con 1 + 1' cómo defiende a Ucrania y sobre los sueños después de la guerra",
+      "article_fourth": "Guerra planetaria del 5 al 6 de abril: por qué los astrólogos llaman peligrosos a estos días",
+      "article_fifth": "Horóscopo del 5 de abril para todos los signos del zodiaco: el precio del más caro siempre es alto"
+    },
+    "latest_news": {
+      "article_first": "'We were unlucky with our neighbor for a long time, but the Russians never managed to destroy us' - TSN journalist Yulia Kirienko",
+      "article_second": "Charitable Foundation 'You are not alone 1 + 1 media' received and donates 12.5 tons of humanitarian aid",
+      "article_third": "Lydia Taran told about a meeting in Luxembourg with Alona Zagreb: a girl who shot a video diary of the blockade of Mariupol",
+      "article_fourth": "'I hold the blow together with my people ', - actress Irma Vitovska told 'ZVL'exclusively about her volunteer activities during the war and her true values",
+      "article_fifth": "Voice of the Country-12 coach Oleksandra Zaritska showed her children's photos from Kharkiv: 'City of free, talented people'  "
+    }
+  },
+  "main_news": {
+    "article_first": "How to move from survival mode to life mode: advice to psychologist Anna Kushneruk ",
+    "article_second": "Why Russia has been cynically encroaching on our history and cultural heritage for centuries: crimes and myths of Moscow (historical films 'Ukraine. The Return of Its History')",
+    "article_third": "Solar eclipse in Ukraine in 2022: when and what to prepare for",
+    "article_fourth": "The war is not an obstacle: sowing has started in 20 regions of Ukraine",
+    "article_fifth": "The war is not an obstacle: sowing has started in 20 regions of Ukraine"
+  },
+  "more_news": {
+    "title":"More News",
+    "button":"Read all news",
+    "article_first": "Rare shot: Sviatoslav Vakarchuk with his daughter-volunteer in Lviv",
+    "article_second": "A traditional Friday charity concert took place in Okhmatdyt: patients and doctors were supported by 1 + 1 presenter Solomiya Vitvitska, singer Vitaliy Kozlovsky and a number of young artists",
+    "article_third": "The Ukrainian boy, with whom Angelina Jolie met in an Italian hospital, became a ward of the charity project 'Make a dream come true'",
+    "article_fourth": "Official: Kalush Orchestra will perform live at Eurovision-2022 and attend promo concerts on the eve of the song contest",
+    "article_fifth": "A world-class model, Ukrainian Lev Ulesov became a military doctor of territorial defense: details in 'Breakfast Online'"
+  },
+  "celebrity_news": {
+    "title":"Star Life",
+    "button":"Go to the project`s page",
+    "article_first": "Olya Polyakova in 'Secular Life' commented on the competition with other Voice of the Country coaches and told about the audience's reaction to her participation in the show",
+    "article_second": "'Maybe I will give consent to my husband's third child', - Kateryna Kuhar shared her personal life with 'Secular Life'",
+    "article_third": "Artur Logai told about terrible moments during horseback riding during the filming of the series 'House of Bobrinsky'",
+    "article_fourth": "What surprised the host of the show 'Your Day' Kostiantyn Hrubych in an interview for 'Secular Life with Kateryna Osadcha'",
+    "article_fifth": "DOROFEEVA admitted in 'Secular Life': 'Finally I started to like myself'"
+  },
+  "beauty_news": {
+    "title":"News of the section",
+    "button":"Go to the section",
+    "article_first": "Monthly haircut calendar for April 2022: favorable and unfavorable days for beauty ",
+    "article_second": "Huge Ukrainian flag at Mercedes Benz Fashion Week in Berlin: Ukrainian designer Jean Gritzfeldt presents a collection created during the war",
+    "article_third": "What jeans are out of fashion and what to combine with trendy wide jeans (stylist's advice)",
+    "article_fourth": "How to clean shoes from salt: leather, suede, nubuck (explained the master of leather restoration)   ",
+    "article_fifth": "Instead of a hat: stylish and warm versions of hats for the winter (advice from designer Andre Tan)",
+    "article_sixth": "Manicure ideas: concise and delicate designs"
+  },
+  "travel_ua": {
+    "title":"Travel to Ukraine with Dmitry Komarov",
+    "article_first": "Ancient traditions of Hutsul cheesemakers and secrets of Carpathian production",
+    "article_second": "Geographical center of Europe and the way to the birthplace of Hutsul cheese",
+    "article_third": "Ukrainian Robinson Crusoe: as a hermit monk adapted to life",
+    "article_fourth": "What connects the lighthouse on the island of Jarilgach with the Eiffel Tower and Paris",
+    "article_fifth": "How Dmitry Komarov and Alexander Dmitriev rested with their families",
+    "article_sixth": "How Dmitry Komarov and Alexander Dmitriev rested with their families"
+  },
+  "video": {
+    "title": "More programs",
+    "button": "Watch all programs",
+    "article_first": "breakfast with 1+1",
+    "article_second": "laughter league",
+    "article_third": "lipsink battle",
+    "article_fourth": "breakfast.holiday",
+    "article_fifth": "your evening",
+    "article_sixth": "wings of love",
+    "time_first":"Mon-Fr",
+    "time_second":"Mon-Fr",
+    "time_third":"soon",
+    "time_fourth":"Sat-Sun",
+    "time_fifth":"since 7 february",
+    "time_sixth":"Mon-Fr"
+  },
+  "voice_ua": {
+    "title": "Voice of the Country",
+    "button": "All videos"
+  },
+  "footer":{
+    "link1":"about channel",
+    "link2":"satellite coding",
+    "link3":"advertisement",
+    "link4":"problems with channel 1+1",
+    "link5":"casts",
+    "link6":"career",
+    "link7":"announcers",
+    "link8":"ownership structure",
+    "link9":"privacy policy"
+  },
+  "tv_program":{
+    "title":"Now on 1+1",
+    "button":"All TVProgram",
+    "news":"News"
+  }
+}

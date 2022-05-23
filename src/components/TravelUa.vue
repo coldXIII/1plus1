@@ -1,20 +1,22 @@
 <template>
   <div class="container">
     <div class="fade"></div>
-    <h1>Мандруй Україною з Дмитром Комаровим</h1>
+    <h1>{{ $t('travel_ua.title') }}</h1>
     <div class="container-inner">
       <div class="video">
-        <Videoplayer class="videoplayer wow animate__animated animate__slideInLeft" />
+        <Videoplayer
+          class="videoplayer wow animate__animated animate__slideInLeft"
+        />
       </div>
       <div class="video-list">
         <article class="articles wow animate__animated animate__slideInRight">
           <ul>
             <li v-for="(item, id) in travelUA" :key="id">
               <div class="image">
-                <img :src="require(`../assets/image/${item.image}.jpg`)" />
+                <img :src="require(`@/assets/image/${item.image}.jpg`)" />
               </div>
               <div class="text">
-                <a href="">{{ item.title }} </a>
+                <a href="">{{ $t(`travel_ua.${item.title}`) }} </a>
               </div>
             </li>
           </ul>
@@ -26,15 +28,15 @@
 
 <script>
 import { mapState } from 'pinia';
-import { useStore } from '../pinia/data.js';
+import { useTravelUAStore } from '@/pinia/travelua.store';
 import Videoplayer from './videoplayer/VideoPlayer.vue';
 export default {
   name: 'TravelUa',
   components: {
     Videoplayer,
   },
-    computed: {
-    ...mapState(useStore, ['travelUA']),
+  computed: {
+    ...mapState(useTravelUAStore, ['travelUA']),
   },
 };
 </script>
@@ -111,12 +113,12 @@ export default {
       }
 
       li {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
         margin: 0.5rem 0;
 
         .image {
+          grid-column: 3 span;
           max-width: 13rem;
 
           img {
@@ -126,6 +128,7 @@ export default {
           }
         }
         .text {
+          grid-column: 9 span;
           display: flex;
           justify-content: flex-start;
           align-items: center;

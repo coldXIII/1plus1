@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <div class="header">
-      <h2>Зараз на 1+1</h2>
-      <a href="" class="btn">Вся телепрограма</a>
+      <h2>{{$t('tv_program.title')}}</h2>
+     <a href="" class="btn">{{$t('tv_program.button')}}</a>
     </div>
     <div class="sliderbox">
       <Carousel
@@ -14,7 +14,7 @@
         <Slide v-for="slide in telePrograms" :key="slide">
           <div class="carousel__item">
             <h3>{{ slide.time }}</h3>
-            <span>{{ slide.program }}</span>
+             <span>{{ $t(`tv_program.${slide.program}`) }} </span>
           </div>
         </Slide>
       </Carousel>
@@ -28,7 +28,7 @@ import 'vue3-carousel/dist/carousel.css';
 import { Carousel, Slide } from 'vue3-carousel';
 
 import { mapState } from 'pinia';
-import { useStore } from '../pinia/data.js';
+import { useProgramsStore } from '@/pinia/programs.store';
 
 import MoreNews from '@/components/MoreNews.vue';
 export default {
@@ -66,7 +66,7 @@ export default {
     };
   },
   computed: {
-    ...mapState(useStore, ['telePrograms']),
+    ...mapState(useProgramsStore, ['telePrograms']),
   },
 };
 </script>

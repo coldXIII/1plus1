@@ -5,10 +5,10 @@
         <img :src="require(`../../assets/image/${article.image}.jpg`)" />
       </div>
       <div class="article">
-        <a href="">{{ article.title }} </a><br />
+        <a href=""> {{ $t(`hero.top_news.${article.title}`) }} </a><br />
         <div class="tags">
-          <span class="date">{{ article.date }}</span> &nbsp;
-          <span class="tag">{{ article.tag }}</span>
+          <span class="date">{{ $d(new Date()) }}</span> &nbsp;
+          <span class="tag">{{ $t(`common.${article.tag}`) }}</span>
         </div>
       </div>
     </li>
@@ -16,16 +16,14 @@
 </template>
 
 <script>
-
-import {mapState} from "pinia"
-import { useStore } from '../../pinia/data.js';
+import { mapState } from 'pinia';
+import { useTabsStore } from '@/pinia/tabs.store';
 export default {
   name: 'TopNews',
-  computed:{
- ...mapState(useStore,['topNews'])
-  }
-  }
-
+  computed: {
+    ...mapState(useTabsStore, ['topNews']),
+  },
+};
 </script>
 
 <style lang="scss" scoped>

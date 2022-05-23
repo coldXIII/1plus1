@@ -2,26 +2,25 @@
   <div class="container">
     <div class="header">
       <h2>
-        Новини рубріки
-        <span>#краса</span>
+        {{ $t('beauty_news.title') }}
+        <span>{{ $t('common.tag4') }}</span>
       </h2>
-      <a href class="btn">Перейти до рубріки</a>
+      <a href class="btn"> {{ $t('beauty_news.button') }}</a>
     </div>
     <div class="main wow animate__animated animate__zoomIn">
       <div class="articles">
         <ul class="w">
           <li v-for="(item, id) in beautyNews" :key="id">
             <div class="image">
-              <img :src="require(`../assets/image/${item.image}.jpg`)" />
+              <img :src="require(`@/assets/image/${item.image}.jpg`)" />
             </div>
             <div class="text">
               <a href>
-                Місячний календар стрижок на квітень 2022: сприятливі та
-                несприятливі дні для наведення краси
+                <a href="">{{ $t(`beauty_news.${item.title}`) }} </a>
               </a>
               <div class="tags">
-                <span class="date">{{ item.date }}</span> &nbsp;
-                <span class="tag">{{ item.tag }}</span>
+                <span class="date">{{ $d(new Date()) }}</span> &nbsp;
+                <span class="tag">{{ $t(`common.${item.tag}`) }}</span>
               </div>
             </div>
           </li>
@@ -55,7 +54,7 @@
 
 <script>
 import { mapState } from 'pinia';
-import { useStore } from '../pinia/data.js';
+import { useBeautyNewsStore } from '@/pinia/beautynews.store';
 import Slider from './slider/Slider.vue';
 import Slide from './slider/Slide.vue';
 import { ref } from 'vue';
@@ -81,7 +80,7 @@ export default {
     return { activeSlide, slides, visibleSlide, direction };
   },
   computed: {
-    ...mapState(useStore, ['beautyNews']),
+    ...mapState(useBeautyNewsStore, ['beautyNews']),
     slidesLength() {
       return this.slides.length;
     },
@@ -139,11 +138,17 @@ export default {
         width: 100%;
       }
       li {
-        display: flex;
-        margin: 0.5rem 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 0.5rem;
+        padding: 0.3rem;
 
         .image {
-          max-width: 8rem;
+          grid-column: 3 span;
+          max-width: 6rem;
+          @media(max-width:550px){
+            width:auto;
+          }
 
           img {
             width: 100%;
@@ -151,12 +156,16 @@ export default {
           }
         }
         .text {
+          grid-column: 9 span;
           display: flex;
-          justify-content: flex-start;
-          align-items: center;
+          justify-content: center;
+          align-items: flex-start;
           flex-direction: column;
           gap: 0.5rem;
           padding: 0.2rem;
+           @media(max-width:550px){
+             grid-column: 10 span;
+          }
 
           a {
             font-size: 0.7rem;

@@ -1,18 +1,18 @@
 <template>
   <div class="container">
     <div class="header">
-      <h2>Зіркове життя</h2>
-      <a href="" class="btn">Перейти на сторінку проекту</a>
+      <h2>{{ $t('celebrity_news.title') }}</h2>
+      <a href="" class="btn">{{ $t('celebrity_news.button') }}</a>
     </div>
     <div class="gridbox wow animate__animated animate__zoomIn">
       <div class="gridbox-item" v-for="(item, id) in celebrityNews" :key="id">
         <div class="image">
-          <img :src="require(`../assets/image/${item.image}.jpg`)" />
+          <img :src="require(`@/assets/image/${item.image}.jpg`)" />
         </div>
-        <a href="">{{ item.title }} </a>
+        <a href="">{{ $t(`main_news.${item.title}`) }} </a>
         <div class="tags">
-          <span class="date">{{ item.date }}</span> &nbsp;
-          <span class="tag">{{ item.tag }}</span>
+          <span class="date">{{ $d(new Date()) }}</span> &nbsp;
+          <span class="tag">{{ $t(`common.${item.tag}`) }}</span>
         </div>
       </div>
     </div>
@@ -21,11 +21,11 @@
 
 <script>
 import { mapState } from 'pinia';
-import { useStore } from '../pinia/data.js';
+import { useCelebrityNewsStore } from '@/pinia/celebritynews.store';
 export default {
-  name: 'CelebrityLife',
-    computed: {
-    ...mapState(useStore, ['celebrityNews']),
+  name: 'CelebrityNews',
+  computed: {
+    ...mapState(useCelebrityNewsStore, ['celebrityNews']),
   },
 };
 </script>

@@ -3,12 +3,12 @@
     <div class="gridbox wow animate__animated animate__zoomIn" >
       <div class="gridbox-item" v-for="(item, id) in mainNews" :key="id">
         <div class="image">
-          <img :src="require(`../assets/image/${item.image}.jpg`)" />
+          <img :src="require(`@/assets/image/${item.image}.jpg`)" />
         </div>
-        <a href="">{{ item.title }} </a>
+        <a href="">{{ $t(`main_news.${item.title}`) }} </a>
         <div class="tags">
-          <span class="date">{{ item.date }}</span> &nbsp;
-          <span class="tag">{{ item.tag }}</span>
+          <span class="date">{{ $d( new Date()) }}</span> &nbsp;
+          <span class="tag">{{ $t(`common.${item.tag}`) }}</span>
         </div>
       </div>
     </div>
@@ -17,12 +17,11 @@
 
 <script>
 import { mapState } from 'pinia';
-import { useStore } from '../pinia/data.js';
-
+import { useMainNewsStore } from '@/pinia/mainnews.store';
 export default {
-  name: 'MainNews',
-    computed: {
-    ...mapState(useStore, ['mainNews']),
+  name: 'IntNews',
+  computed: {
+    ...mapState(useMainNewsStore, ['mainNews']),
   },
 };
 </script>

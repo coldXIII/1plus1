@@ -3,10 +3,10 @@
     <div class="slider">
       <slot></slot>
       <button @click="next" class="next">
-        <ion-icon name="chevron-forward-outline"></ion-icon>
+      <i class="fa-solid fa-chevron-right"></i>
       </button>
       <button @click="prev" class="prev">
-        <ion-icon name="chevron-back-outline"></ion-icon>
+      <i class="fa-solid fa-chevron-left"></i>
       </button>
     </div>
   </div>

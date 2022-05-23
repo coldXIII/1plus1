@@ -1,17 +1,17 @@
 <template>
   <div class="container">
     <div class="header">
-      <h2>Більше програм</h2>
-      <a href="" class="btn">Дивитись всі програми</a>
+      <h2>{{ $t('video.title') }}</h2>
+      <a href="" class="btn">{{ $t('video.button') }}</a>
     </div>
     <div class="gridbox wow animate__animated animate__zoomIn">
       <div class="grid-item" v-for="(video, id) in videoPrograms" :key="id">
         <div class="image">
-          <img :src="require(`../assets/image/${video.image}.png`)" />
+          <img :src="require(`@/assets/image/${video.image}.png`)" />
           <div class="time">
-            <p>{{ video.day }}</p>
+            <p>{{ $t(`video.${video.day}`) }}</p>
             <h2>{{ video.time }}</h2>
-            <span>{{ video.program }}</span>
+            <span>{{ $t(`video.${video.program}`) }} </span>
           </div>
         </div>
       </div>
@@ -21,11 +21,11 @@
 
 <script>
 import { mapState } from 'pinia';
-import { useStore } from '../pinia/data.js';
+import { useVideoStore } from '@/pinia/video.store';
 export default {
   name: 'VideoProgram',
-    computed: {
-    ...mapState(useStore, ['videoPrograms']),
+  computed: {
+    ...mapState(useVideoStore, ['videoPrograms']),
   },
 };
 </script>
@@ -56,11 +56,6 @@ export default {
       text-align: start;
       @media (max-width: 1000px) {
         width: 100%;
-      }
-
-      &:nth-child(3) .image .time h2 {
-        font-size: 1rem;
-        padding: 1rem 0.2rem;
       }
 
       .image {
