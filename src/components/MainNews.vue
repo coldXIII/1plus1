@@ -1,13 +1,13 @@
 <template>
   <div class="container">
-    <div class="gridbox wow animate__animated animate__zoomIn" >
+    <div class="gridbox wow animate__animated animate__zoomIn">
       <div class="gridbox-item" v-for="(item, id) in mainNews" :key="id">
         <div class="image">
           <img :src="require(`@/assets/image/${item.image}.jpg`)" />
         </div>
         <a href="">{{ $t(`main_news.${item.title}`) }} </a>
         <div class="tags">
-          <span class="date">{{ $d( new Date()) }}</span> &nbsp;
+          <span class="date">{{ $d(new Date()) }}</span> &nbsp;
           <span class="tag">{{ $t(`common.${item.tag}`) }}</span>
         </div>
       </div>

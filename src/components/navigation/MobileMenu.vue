@@ -3,13 +3,14 @@
     <div class="nav-menu">
       <ul>
         <li>
-          <a href=""
-            ><i class="fa-solid fa-list"></i>&nbsp; {{ $t('nav.programs') }}</a
+          <a href="">
+            <i class="fa-solid fa-video"></i>
+            &nbsp; {{ $t('nav.programs') }}</a
           >
         </li>
         <li>
           <a href=""
-            ><i class="fa-solid fa-tv"></i> &nbsp; {{ $t('nav.news') }}</a
+            ><i class="fa-solid fa-radio"></i> &nbsp; {{ $t('nav.news') }}</a
           >
         </li>
         <li>
@@ -19,12 +20,12 @@
         </li>
         <li>
           <a href=""
-            ><i class="fa-solid fa-tv"></i> &nbsp;{{ $t('nav.movies') }}</a
+            ><i class="fa-solid fa-film"></i> &nbsp;{{ $t('nav.movies') }}</a
           >
         </li>
         <li>
-          <a href=""
-            ><i class="fa-solid fa-users"></i> &nbsp;
+          <a href="">
+            <i class="fa-solid fa-list"></i> &nbsp;
             {{ $t('nav.anouncement') }}</a
           >
         </li>

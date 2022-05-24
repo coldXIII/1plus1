@@ -23,14 +23,17 @@
           @click.prevent="activeLink('/program')"
           :class="{ active: currentLink == '/program' }"
         >
-          <a href @click.prevent="showTabOne = !showTabOne, showTabTwo = false">
+          <a
+            href
+            @click.prevent="(showTabOne = !showTabOne), (showTabTwo = false)"
+          >
             {{ $t('nav.programs') }} &nbsp;
             <i class="fa-solid fa-chevron-down"></i>
           </a>
           <div class="tab tabOne" v-if="showTabOne">
             <ul>
-              <li v-for="item in links" :key="item.text_key">
-                {{ $t(`nav.${item.text_key}`) }}
+              <li v-for="(item, index) in links" :key="index">
+                {{ $t(`nav.${item.title}`) }}
               </li>
             </ul>
           </div>
@@ -39,14 +42,17 @@
           @click.prevent="activeLink('/news')"
           :class="{ active: currentLink == '/news' }"
         >
-          <a href @click.prevent="showTabTwo = !showTabTwo, showTabOne = false">
+          <a
+            href
+            @click.prevent="(showTabTwo = !showTabTwo), (showTabOne = false)"
+          >
             {{ $t('nav.news') }} &nbsp;
-             <i class="fa-solid fa-chevron-down"></i>
+            <i class="fa-solid fa-chevron-down"></i>
           </a>
           <div class="tab tabTwo" v-if="showTabTwo">
             <ul>
-              <li v-for="item in news" :key="item.text_key">
-                {{ $t(`nav.news_array.${item.text_key}`) }}
+              <li v-for="(item, index) in news" :key="index">
+                {{ $t(`nav.news_array.${item.title}`) }}
               </li>
             </ul>
           </div>
@@ -75,7 +81,7 @@
           <li v-for="icon in socialIcons" :key="icon">
             <a href>
               <div class="icon">
-                <img :src="require(`../../assets/icons/${icon}.png`)" />
+                <img :src="require(`@/assets/icons/${icon}.png`)" />
               </div>
             </a>
           </li>
@@ -110,27 +116,27 @@ export default {
   name: 'AppHeader',
   data() {
     return {
-      showMobileMenu: false,
       currentLink: '/',
+      showMobileMenu: false,
       showTabOne: false,
       showTabTwo: false,
       showForm: false,
 
       links: [
-        { text_key: 'programs' },
-        { text_key: 'news' },
-        { text_key: 'video' },
-        { text_key: 'movies' },
-        { text_key: 'anouncement' },
+        { title: 'programs' },
+        { title: 'news' },
+        { title: 'video' },
+        { title: 'movies' },
+        { title: 'anouncement' },
       ],
       news: [
-        { text_key: 'recipes' },
-        { text_key: 'horoscope' },
-        { text_key: 'health' },
-        { text_key: 'beauty' },
-        { text_key: 'holiday' },
-        { text_key: 'stars' },
-        { text_key: 'socium' },
+        { title: 'recipes' },
+        { title: 'horoscope' },
+        { title: 'health' },
+        { title: 'beauty' },
+        { title: 'holiday' },
+        { title: 'stars' },
+        { title: 'socium' },
       ],
       socialIcons: ['facebook', 'twitter', 'instagram'],
     };
@@ -181,7 +187,10 @@ export default {
 
     &-logo {
       width: 5rem;
-      min-width:4rem;
+      min-width: 4rem;
+       @media screen and (max-width: 992px) {
+     margin-left: 3rem;
+  }
       img {
         width: 100%;
       }
@@ -214,7 +223,6 @@ export default {
         &:hover i {
           transform: rotate(180deg);
           transition: 0.2s ease-in-out;
-        
         }
 
         &.active a {
